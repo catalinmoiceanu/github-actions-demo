@@ -25,6 +25,10 @@ class Request
         return $this->payload[$name] ?? $default;
     }
 
+    /**
+     * @psalm-suppress PossiblyUnusedMethod
+     * @return null[]|string[]
+     */
     public function getHeaders(): array
     {
         return $this->headers;
