@@ -26,6 +26,7 @@ class Request
     }
 
     /**
+     * @psalm-suppress PossiblyUnusedMethod
      * @return null[]|string[]
      */
     public function getHeaders(): array
