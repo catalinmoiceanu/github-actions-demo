@@ -21,7 +21,7 @@ jobs:
       run: docker compose up -d --build
 
     - name: Validate composer.json and composer.lock
-      run: docker exec -t app_web composer validate --strict
+      run: composer validate --strict
 
     - name: Cache Composer packages
       id: composer-cache
@@ -33,7 +33,7 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Install dependencies
-      run: docker exec -t app_web composer install --prefer-dist --no-progress
+      run: composer install --prefer-dist --no-progress
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
@@ -45,4 +45,4 @@ jobs:
       run: docker exec app_web php vendor/bin/psalm
 
     - name: Run PHPUnit
-      run: docker exec app_web php vendor/bin/phpunit 
+      run: docker exec app_web php vendor/bin/phpunit
