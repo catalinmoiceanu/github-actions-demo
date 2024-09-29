@@ -25,6 +25,9 @@ class Request
         return $this->payload[$name] ?? $default;
     }
 
+    /**
+     * @return null[]|string[]
+     */
     public function getHeaders(): array
     {
         return $this->headers;
