@@ -1,0 +1,14 @@
+services:
+  web:
+    container_name: app_web
+    image: php:8.3-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+      - ./docker/httpd/vhost.conf:/etc/apache2/sites-available/000-default.conf
+#  php:
+#    container_name: app_php
+#    image: php:8.3-fpm
+#    volumes:
+#      - ./:/var/www/html

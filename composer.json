@@ -1,0 +1,32 @@
+{
+    "name": "catalinmoiceanu/github-actions-demo",
+    "description": "Demo project in PHP to see how Github Actions works.",
+    "type": "project",
+    "require": {
+        "php": "^8.3"
+    },
+    "require-dev": {
+        "laravel/dusk": "^8.2",
+        "phpunit/phpunit": "^10.5",
+        "phpstan/phpstan": "^1.12",
+        "vimeo/psalm": "5.26.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "CatalinMoiceanu\\GithubActionsDemo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CatalinMoiceanu\\GithubActionsDemo\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Catalin Moiceanu",
+            "email": "catalin_moiceanu@yahoo.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
