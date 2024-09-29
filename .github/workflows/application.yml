@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Raise containers
-      run: docker-compose up -d --build
+      run: docker compose up -d --build
 
     - name: Validate composer.json and composer.lock
       run: docker exec -t app_web composer validate --strict
